@@ -1,6 +1,6 @@
 
-const byte dataPin = D2; 
-const byte interrupt = D2;
+const byte dataPin = 2; 
+const byte interrupt = 2;
 int upload_interval = 60000;
 const int additionalBits = 0;
 int beginn = millis();
@@ -11,11 +11,11 @@ bool Ausgang[14];
 String Drehzahl[5];
 String rssi;
 
-const char* ssid = "WLAN Name";  // SSID deines WLAN Netzwerkes
-const char* wlan_passwd = "dasPasswort"; // Passwort deines WLAN Netzwerkes
-char* esp_hostname = "BL-NET";
+const char* ssid = "tbd";  // SSID deines WLAN Netzwerkes
+const char* wlan_passwd = "tbd"; // Passwort deines WLAN Netzwerkes
+char* esp_hostname = "DL2MQTT-GW";
 
-const char* mqtt_server = "mqtt-server"; // MQTT Server
+const char* mqtt_server = "192.168.2.2"; // MQTT Server
 
 extern "C" { 
   #include "user_interface.h" 
@@ -23,19 +23,28 @@ extern "C" {
 
 #include <PubSubClient.h>
 #include <ESP8266WiFi.h>
-#include "WLAN.h"
-#include "MQTT.h"
 #include "receive.h"
 #include "process.h"
 #include "dump.h"
-
+#include "MQTT.h"
 
 
 void setup() {
   wifi_station_set_hostname(esp_hostname);
+  WiFi.mode(WIFI_AP);
   Serial.begin(115200);
+  WiFi.begin(ssid, wlan_passwd);
+  
+  byte WifiatemptCount = 0;
+	while ((WiFi.status() != WL_CONNECTED) && (WifiatemptCount <= 10)) {
+    String myString = String(WifiatemptCount);
+		Serial.print(myString + "...");
+		delay(500);
+		WifiatemptCount++;
+	}
+
   // WLAN Verbindung
-  if (!wlan_connect()) {
+  if (WiFi.status() != WL_CONNECTED) {
       Serial.println ("WLAN Verbindung fehlgeschlagen!");
       Serial.println ("Reset!");
       delay(2000);
@@ -44,6 +53,7 @@ void setup() {
       Serial.println();
       Serial.print("Verbindung! RSSI: "); Serial.print(WiFi.RSSI()); Serial.println(" dBi");
       Serial.print("IP-Adresse: "); Serial.println(WiFi.localIP());
+      delay(2000);
     }
   Receive::start();
 }
