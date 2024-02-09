@@ -15,7 +15,7 @@ const byte interrupt = 2;
 2. Set WiFi (SSID, PW) and MQTT data (server IP, PW, Username)
 
 Hardware:
-1. Voltage divider needede (only blue part):
+1. Voltage divider needede (only blue part) for 12V-DL-Bus (like used in USV16x2)
 
 ![image](https://github.com/stoffelll/UVR2MQTT/assets/5340003/666d9681-e5fb-4d65-9d63-d0bebb95854b)
 
