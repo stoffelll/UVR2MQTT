@@ -13,12 +13,17 @@
 namespace Receive {
 
   void start() {
+    Serial.print("\nStart in preparation");
+    delay(2000);
     pulse_count = got_first = last_bit_change = 0;
     receiving = true;
     Serial.print("\nReceiving ... ");
-    // bei einem CHANGE am Daten-Pin wird pin_changed aufgerufen
     // on a CHANGE on the data pin pin_changed is called
+    //CM -> https://www.reddit.com/r/esp8266/comments/c8lbjr/help_an_idiot_out_trouble_with_interrupts/
+    //pinMode(interrupt, INPUT_PULLUP);
+    //attachInterrupt(digitalPinToInterrupt(interrupt), pin_changed, CHANGE); //modified -> added digitalPinToInterrupt
     attachInterrupt(interrupt, pin_changed, CHANGE);
+    Serial.print("\nInterrupt attached ... ");
   }
 
   void stop() {
@@ -27,7 +32,8 @@ namespace Receive {
     receiving = false;
   }
 
-  void pin_changed() {
+  //CM -> https://www.reddit.com/r/esp8266/comments/c8lbjr/help_an_idiot_out_trouble_with_interrupts/
+  void ICACHE_RAM_ATTR pin_changed() {
     byte val = digitalRead(dataPin); // Zustand einlesen // read state
     unsigned long time_diff = micros() - last_bit_change;
     last_bit_change = micros();
