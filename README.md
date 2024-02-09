@@ -24,7 +24,7 @@ MQTT: homeassistant/UVR16x2/Sensor1: 31.70 -> Vorlauf H-Box (Temperatur)
 MQTT: homeassistant/UVR16x2/Sensor2: 46.20 -> T-Warmwasser (Temperatur Brauchwasser)
 MQTT: homeassistant/UVR16x2/Sensor3: 31.40 -> Temp WT-H-Box (Temperatur)
 MQTT: homeassistant/UVR16x2/Sensor4: 31.40 -> T-Heizkreis Vorlauf 1 (Temperatur Heizung)
-MQTT: homeassistant/UVR16x2/Sensor5: 409.50 -> UNKLAR T-Kollektor -> nicht genutzt 
+MQTT: homeassistant/UVR16x2/Sensor5: 409.50 -> UNKLAR T-Kollektor -> nicht genutzt
 MQTT: homeassistant/UVR16x2/Sensor6: 409.50 -> UNKLAR T-Speicher Unten
 MQTT: homeassistant/UVR16x2/Sensor7: 31.60 -> T-Puffer mitte (T-Kühlpuffer/Heizpuffer mitte) -> abhängig von der eigenen Installation
 MQTT: homeassistant/UVR16x2/Sensor8: 409.50 -> UNKLAR T-Heizkreis Vorlauf 2 -> nicht genutzt
@@ -40,7 +40,7 @@ MQTT: homeassistant/UVR16x2/Ausgang1: 1 -> Pumpe H-Box 1
 MQTT: homeassistant/UVR16x2/Ausgang2: 0 -> Ventil-Warmwasser (vermutlich Umschaltventil zwischen WW und Heizung)
 MQTT: homeassistant/UVR16x2/Ausgang3: 1 -> Heizkreispumpe 1
 MQTT: homeassistant/UVR16x2/Ausgang4: 0 -> E-Heizpatrone
-MQTT: homeassistant/UVR16x2/Ausgang5: 0 -> WP-aus 5c 1
+MQTT: homeassistant/UVR16x2/Ausgang5: 0 -> WP-aus 5c 1 (Unklar)
 MQTT: homeassistant/UVR16x2/Ausgang6: 0 -> Solarpumpe
 MQTT: homeassistant/UVR16x2/Ausgang7: 0 -> Heizkreispumpe 2
 MQTT: homeassistant/UVR16x2/Ausgang8: 0 -> Mischer-Heizkreis 1 (vermutlich erhöhen oder reduzieren)
