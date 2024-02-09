@@ -19,7 +19,10 @@ Hardware:
 
 ![image](https://github.com/stoffelll/UVR2MQTT/assets/5340003/666d9681-e5fb-4d65-9d63-d0bebb95854b)
 
+
+
 Output in MQTT:
+
 MQTT: homeassistant/UVR16x2/Sensor1: 31.70 -> Vorlauf H-Box (Temperatur)
 
 MQTT: homeassistant/UVR16x2/Sensor2: 46.20 -> T-Warmwasser (Temperatur Brauchwasser)
