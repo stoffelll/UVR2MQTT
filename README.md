@@ -29,7 +29,7 @@ Read values from DL-Bus of e.g. Technische Alternative UVR1611 or UVR16x2 with E
 --> Username: admin // Password: "HomeAssistant"
 
 **Hardware:**
-- Voltage divider needede (only blue part) for 12V-DL-Bus (like used in USV16x2):
+- Voltage divider needed (only blue part) for 12V-DL-Bus (like used in USV16x2):
 ![image](https://github.com/stoffelll/UVR2MQTT/assets/5340003/7d38cf28-da65-411f-b2ac-bb542ce24af8)
 ![Voltage Divider](https://github.com/stoffelll/UVR2MQTT/assets/5340003/49053864-e07e-430d-9c87-4528ede80637)
 
