@@ -17,7 +17,7 @@ Read values from DL-Bus of e.g. Technische Alternative UVR1611 or UVR16x2 with E
 
 **Configuration needed:**
 - Set pins used for DL-Bus    
-`const byte dataPin = 2;`  
+`const byte dataPin = 2;`  **IMPORTANT: you need to use "D4"-Pin (ESP8266) when you have set "dataPin = 2"**  
 `const byte interrupt = 2;`  
 - Set WiFi (SSID, PW) and MQTT data (server IP, PW, Username)  
 --> UVR2MQTT.ino  
@@ -30,11 +30,16 @@ Read values from DL-Bus of e.g. Technische Alternative UVR1611 or UVR16x2 with E
 
 **Hardware:**
 - Voltage divider needed (only blue part) for 12V-DL-Bus (like used in USV16x2):
-![image](https://github.com/stoffelll/UVR2MQTT/assets/5340003/7d38cf28-da65-411f-b2ac-bb542ce24af8)
-![Voltage Divider](https://github.com/stoffelll/UVR2MQTT/assets/5340003/49053864-e07e-430d-9c87-4528ede80637)
+![image](https://github.com/stoffelll/UVR2MQTT/assets/5340003/7d38cf28-da65-411f-b2ac-bb542ce24af8)  
+**Voltage divider with resistor network (to resistors in a row to get 8k6 ohm resistance**  
+![Voltage Divider](https://github.com/stoffelll/UVR2MQTT/assets/5340003/49053864-e07e-430d-9c87-4528ede80637)  
 
-**connected to another DL-bus-sensor from Technische Alternative "FTS14-240DL"**
-![DL-Bus via other Sensor](https://github.com/stoffelll/UVR2MQTT/assets/5340003/fd853702-f24f-4b42-a9d9-8e9c598a7fe7)
+**connected to another DL-bus-sensor from Technische Alternative "FTS14-240DL"**  
+![DL-Bus via other Sensor](https://github.com/stoffelll/UVR2MQTT/assets/5340003/fd853702-f24f-4b42-a9d9-8e9c598a7fe7)  
+
+**connection to ESP8266 - IMPORTANT: you need to use "D4" when you have set "dataPin = 2"**  
+![ESP8266-Pins](https://github.com/stoffelll/UVR2MQTT/assets/5340003/68ffce30-d5c1-4c1e-b1d1-131500b444dc)  
+
 - yellow cable is ground/gnd/"GND-DL Bus"  
 --> (I used a resistor network of two resistors, as I didn't had one 8k6 ohm resistor)
 - red cable is DL/"DL Bus @ 12V"
