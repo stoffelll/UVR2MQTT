@@ -10,12 +10,12 @@ Auslesen des DL-Busses der UVR1611 mit einem ESP8266 und weitergabe der Daten pe
 - Set pins used for DL-Bus    
 `const byte dataPin = 2;`  
 `const byte interrupt = 2;`  
-- Set WiFi (SSID, PW) and MQTT data (server IP, PW, Username)
+- Set WiFi (SSID, PW) and MQTT data (server IP, PW, Username)  
 --> UVR2MQTT.ino  
 `const char* ssid = "tbd";  // Wifi SSID/Name`  
 `const char* wlan_passwd = "tbd"; // Wifi Password/PSK`  
 `char* esp_hostname = "DL2MQTT-GW"; // Hostname`  
---> MQTT.h
+--> MQTT.h  
 `mqtt_client.connect("DL2MQTT-GW", "admin", "HomeAssistant");`  
 --> Username: admin // Password: "HomeAssistant"
 
