@@ -1,6 +1,15 @@
 **UVR2MQTT**  
 Read values from DL-Bus of e.g. Technische Alternative UVR1611 or UVR16x2 with ESP8266/ESP32 and send them via MQTT
-  
+
+**Links**  
+- https://github.com/Buster01/UVR2MQTT  
+- https://www.mikrocontroller.net/topic/134862  
+- https://www.ta.co.at/
+- https://www.ta.co.at/sensoren/fts-dl  
+- https://espeasy.readthedocs.io/en/latest/Plugin/P092_UVR1611.html
+- https://espeasy.readthedocs.io/en/latest/Plugin/P092_UVR31.html  
+- https://forum.arduino.cc/t/arduino-zur-messwerterfassung-an-uvr1611-regelung-heizung/59416/15  
+
 
 **Libraries needed:**  
 - PubSubClient
@@ -23,6 +32,9 @@ Read values from DL-Bus of e.g. Technische Alternative UVR1611 or UVR16x2 with E
 - Voltage divider needede (only blue part) for 12V-DL-Bus (like used in USV16x2):
 ![image](https://github.com/stoffelll/UVR2MQTT/assets/5340003/7d38cf28-da65-411f-b2ac-bb542ce24af8)
 ![Voltage Divider](https://github.com/stoffelll/UVR2MQTT/assets/5340003/49053864-e07e-430d-9c87-4528ede80637)
+
+**connected to another DL-bus-sensor from Technische Alternative "FTS14-240DL"**
+![DL-Bus via other Sensor](https://github.com/stoffelll/UVR2MQTT/assets/5340003/fd853702-f24f-4b42-a9d9-8e9c598a7fe7)
 - yellow cable is ground/gnd/"GND-DL Bus"  
 --> (I used a resistor network of two resistors, as I didn't had one 8k6 ohm resistor)
 - red cable is DL/"DL Bus @ 12V"
