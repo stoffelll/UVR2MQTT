@@ -1,6 +1,14 @@
 **UVR2MQTT**  
 Read values from DL-Bus of e.g. Technische Alternative UVR1611 or UVR16x2 with ESP8266/ESP32 and send them via MQTT
-  
+
+**Links**  
+- https://github.com/Buster01/UVR2MQTT  
+- https://www.mikrocontroller.net/topic/134862  
+- https://www.ta.co.at/
+- https://espeasy.readthedocs.io/en/latest/Plugin/P092_UVR1611.html
+- https://espeasy.readthedocs.io/en/latest/Plugin/P092_UVR31.html  
+- https://forum.arduino.cc/t/arduino-zur-messwerterfassung-an-uvr1611-regelung-heizung/59416/15  
+
 
 **Libraries needed:**  
 - PubSubClient
