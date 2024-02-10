@@ -36,13 +36,13 @@ Read values from DL-Bus of e.g. Technische Alternative UVR1611 or UVR16x2 with E
 
 **connected to another DL-bus-sensor from Technische Alternative "FTS14-240DL"**  
 ![DL-Bus via other Sensor](https://github.com/stoffelll/UVR2MQTT/assets/5340003/fd853702-f24f-4b42-a9d9-8e9c598a7fe7)  
-
-**connection to ESP8266 - IMPORTANT: you need to use "D4" when you have set "dataPin = 2"**  
-![ESP8266-Pins](https://github.com/stoffelll/UVR2MQTT/assets/5340003/68ffce30-d5c1-4c1e-b1d1-131500b444dc)  
-
 - yellow cable is ground/gnd/"GND-DL Bus"  
 --> (I used a resistor network of two resistors, as I didn't had one 8k6 ohm resistor)
 - red cable is DL/"DL Bus @ 12V"
+
+
+**connection to ESP8266 - IMPORTANT: you need to use "D4" when you have set "dataPin = 2"**  
+![ESP8266-Pins](https://github.com/stoffelll/UVR2MQTT/assets/5340003/68ffce30-d5c1-4c1e-b1d1-131500b444dc)  
 
 **Output in MQTT:**  
 MQTT: homeassistant/UVR16x2/Sensor1: 31.70 -> Vorlauf H-Box (Temperatur)  
