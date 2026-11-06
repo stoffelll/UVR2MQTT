@@ -50,7 +50,7 @@ namespace Receive {
     } 
   }
 
-  void process_bit(byte b) {
+  void ICACHE_RAM_ATTR process_bit(byte b) {
     // den ersten Impuls ignorieren // ignore first pulse
     pulse_count++;
     if (pulse_count % 2)
