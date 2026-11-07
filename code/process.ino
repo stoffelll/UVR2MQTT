@@ -31,6 +31,8 @@ namespace Process {
       start_bit = analyze();
     }
     trim(); // Start- und Stopbits entfernen // remove start and stop bits
+    if (!check_checksum())
+      return false;
     return check_device(); // nur für die UVR1611
   } 
 
@@ -87,6 +89,24 @@ namespace Process {
         bit++;
       }
     }
+  }
+
+  boolean check_checksum() {
+    byte checksum = 0;
+  
+    // Summe der 63 Datenbytes bilden
+    // calculate sum of the 63 data bytes
+    for (int i = 0; i < 63; i++)
+      checksum += data_bits[i];
+  
+    // Prüfsumme mit Byte 64 vergleichen
+    // compare checksum with byte 64
+    Serial.println("Checksum: " + String(checksum) + " Bit63: " + String(data_bits[63]));
+    if (checksum == data_bits[63])
+      return true;
+  
+    //data_valid = false;
+    return false;
   }
 
   boolean check_device() {
