@@ -83,7 +83,8 @@ namespace Process {
   void write_bit(int pos, byte set); // Bitmap beschreiben // write to bitmap
   void trim(); // Datenrahmen in Bitmap schreiben // remove start and stop bits
   boolean check_device(); // Datenrahmen überprüfen // verify data frame
-
+  boolean check_checksum(); //Checksumme prüfen
+  
   // Informationen auslesen
   // readout information
   void fetch_timestamp(); // Zeitstempel
